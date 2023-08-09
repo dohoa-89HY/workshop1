@@ -9,7 +9,7 @@
 
     <link rel="icon" href="../images/favicon.png" type="image/png">
 
-    <title>Introduction :: Working with EIC Endpoints</title>
+    <title>Giới thiệu :: Làm việc với EIC Endpoints</title>
 
     
     <link href="../css/nucleus.css?1691463368" rel="stylesheet">
@@ -88,7 +88,7 @@
         
         ">
       <a href="../1-introduction/">
-           <b> 1. </b> Introduction
+           <b> 1. </b> Giới thiệu
           
             <i class="fas fa-check read-icon"></i>
           
@@ -114,7 +114,7 @@
         
         ">
       <a href="../2-preparation/">
-           <b> 2. </b> Preparation 
+           <b> 2. </b> Chuẩn bị
           
             <i class="fas fa-check read-icon"></i>
           
@@ -145,7 +145,7 @@
         
         ">
       <a href="../2-preparation/2.1-createVPCwithprivatesubnets/">
-           <b> 2.1 </b> Create VPC with private subnets
+           <b> 2.1 </b> Tạo VPC với Private Subnets
           
             <i class="fas fa-check read-icon"></i>
           
@@ -171,7 +171,7 @@
         
         ">
       <a href="../2-prerequiste/2.2-installawscli/">
-           <b> 2.2 </b> Install AWS CLI
+           <b> 2.2 </b> Cài đặt AWS CLI
           
             <i class="fas fa-check read-icon"></i>
           
@@ -206,7 +206,7 @@
         
         ">
       <a href="../3-createIAMRole/">
-           <b> 3. </b> Create IAM Role
+           <b> 3. </b> Tạo chính sách IAM 
           
             <i class="fas fa-check read-icon"></i>
           
@@ -233,7 +233,7 @@
         
         ">
       <a href="../4-configureIAMusercredentials/">
-           <b> 4. </b> Configure IAM user credentials
+           <b> 4. </b> Định cấu hình thông tin xác thực người dùng IAM
           
             <i class="fas fa-check read-icon"></i>
           
@@ -264,7 +264,7 @@
         
         ">
       <a href="../4-configureIAMusercredentials/4.1-runcommandawsconfigure/">
-           <b> 4.1 </b> Run command aws configure
+           <b> 4.1 </b> Chạy câu lệnh "aws configure"
           
             <i class="fas fa-check read-icon"></i>
           
@@ -292,7 +292,7 @@
         
         ">
       <a href="../4-configureIAMusercredentials/4.2-verifiedopensshclientinstalled/">
-           <b> 4.2 </b> Verified Open SSH client installed
+           <b> 4.2 </b> Xác minh Open SSH client đã được cài đặt
           
             <i class="fas fa-check read-icon"></i>
           
@@ -329,7 +329,7 @@
         
         ">
       <a href="../5-createtheEC2InstanceConnectEndpoints/">
-           <b> 5. </b> Create the EC2 Instance Connect Endpoints
+           <b> 5. </b> Tạo điểm cuối kết nối phiên bản EC2
           
             <i class="fas fa-check read-icon"></i>
           
@@ -355,7 +355,7 @@
         
         ">
       <a href="./6-connectEC2toEICEndpoints/">
-          <b>6. </b> Connect EC2 to EIC Endpoints
+          <b>6. </b> Kết nối EC2 với EIC Endpoints
       
             <i class="fas fa-check read-icon"></i>
       
@@ -386,7 +386,7 @@
         
         ">
       <a href="./6-connectEC2toEICEndpoints/6.1-create2EC2servers/">
-        <b> 6.1 </b> Create 2 EC2 servers
+        <b> 6.1 </b> Tạo 2 máy chủ EC2
           
           <i class="fas fa-check read-icon"></i>
           
@@ -414,7 +414,7 @@
         
         ">
       <a href="./6-connectEC2toEICEndpoints/6.2-connectEC2toEICEndpoints/">
-        <b> 6.2 </b> Connect EC2 to EIC Endpoints
+        <b> 6.2 </b> Kết nối EC2 với EIC Endpoints
           
           <i class="fas fa-check read-icon"></i>
           
@@ -451,7 +451,7 @@
     
         ">
       <a href="./7-cleanupresource/">
-        <b>7. </b> Clean up resources
+        <b>7. </b> Dọn dẹp tài nguyên
       
           <i class="fas fa-check read-icon"></i>
       
@@ -597,7 +597,7 @@
             
           
           
-            <a href='../'>EIC Endpoints</a> > Introduction
+            <a href='../'>EIC Endpoints</a> > Giới thiệu
           
         
           
@@ -624,7 +624,7 @@
           
             <h1>
               
-              Introduction
+              Giới thiệu
             </h1>
           
 
@@ -634,19 +634,19 @@
 
 	<h3>EIC Endpoints</h3>
   <p><img src="../images/1.introduction/shot-1.jpg" alt="EIC_Endpoints"></p>
-<p><strong>Endpoint</strong> is an identity-aware TCP proxy that provides a secure solution to connect to your instances via SSH or RDP in private subnets without IGW, public IPs, agents and bastion hosts. By configuring the EIC Endpoint for your VPC, you can securely connect using existing client tools or the Console/AWS CLI.</p>
+<p><strong>Endpoint</strong> là một proxy TCP nhận biết danh tính, cung cấp giải pháp an toàn để kết nối với các phiên bản của bạn thông qua SSH hoặc RDP trong các mạng con riêng tư không có IGW, IP công cộng, tác nhân và máy chủ pháo đài. Bằng cách định cấu hình Điểm cuối EIC cho VPC của mình, bạn có thể kết nối an toàn bằng các công cụ máy khách hiện có hoặc Console/AWS CLI.</p>
 
-<p>Since EIC Endpoints allow access to private resources from the public IP space, consider the security controls and capabilities in more detail before discussing creating your first EIC Endpoint.</p>
+<p>Vì Điểm cuối EIC cho phép truy cập vào các tài nguyên riêng tư từ không gian IP công cộng, hãy xem xét các khả năng và kiểm soát bảo mật chi tiết hơn trước khi thảo luận về việc tạo Điểm cuối EIC đầu tiên của bạn.</p>
 
-  <h3>Security and control capabilities</h3> 
-<p>EIC endpoints enhance security by combining identity-based authentication and authorization with traditional network perimeter controls, and provide granular access control, logging, monitoring more intensive monitoring and protection. Furthermore, it does all of this without requiring Internet-enabled infrastructure in your VPC, minimizing the possibility of unintended access to private VPC resources.</p>
+  <h3>Khả năng bảo mật và kiểm soát</h3> 
+<p>Các điểm cuối EIC tăng cường bảo mật bằng cách kết hợp xác thực và ủy quyền dựa trên danh tính với các biện pháp kiểm soát vành đai mạng truyền thống, đồng thời cung cấp khả năng kiểm soát truy cập chi tiết, ghi nhật ký, giám sát và bảo vệ chuyên sâu hơn. Hơn nữa, nó thực hiện tất cả những điều này mà không yêu cầu cơ sở hạ tầng hỗ trợ Internet trong VPC của bạn, giảm thiểu khả năng truy cập ngoài ý muốn vào các tài nguyên VPC riêng tư.</p>
 
-  <h3>Other ingredients:</h3>
+  <h3>Các thành phần khác:</h3>
   <h4>IAM</h4> 
-<p><strong>Identity and Access Management (IAM)</strong> allows you to securely manage access to AWS services and resources. Using IAM, you can create and manage users and groups of users in AWS, and use permissions to allow or deny their access to AWS resources</p>
+<p><strong>Identity and Access Management (IAM)</strong> cho phép bạn quản lý quyền truy cập vào các dịch vụ và tài nguyên AWS một cách an toàn. Sử dụng IAM, bạn có thể tạo và quản lý người dùng cũng như nhóm người dùng trong AWS, đồng thời sử dụng các quyền để cho phép hoặc từ chối quyền truy cập của họ vào tài nguyên AWS</p>
 
   <h4>AWS CLI</h4>  
-<p><strong>The AWS Command Line Interface (AWS CLI)</strong> is the unified tool for managing your AWS services. With just one tool to download and configure, you can control multiple AWS services with a single command line and automate them through scripts.</p>
+<p><strong>The AWS Command Line Interface (AWS CLI)</strong> là công cụ hợp nhất để quản lý các dịch vụ AWS của bạn. Chỉ với một công cụ để tải xuống và định cấu hình, bạn có thể kiểm soát nhiều dịch vụ AWS bằng một dòng lệnh duy nhất và tự động hóa chúng thông qua tập lệnh.</p>
 
 <footer class=" footline" >
 	
