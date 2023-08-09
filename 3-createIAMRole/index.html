@@ -638,7 +638,7 @@
 <div class="notices info" ><p>Để tạo hoặc sửa đổi điểm cuối và kết nối với tài nguyên, người dùng phải có quyền IAM bắt buộc và mọi nhóm bảo mật được liên kết với tài nguyên VPC của bạn phải có quy tắc cho phép kết nối.</p></div>
 <li>Trong bước 3, bạn cần tạo 2 chính sách IAM và 1 người dùng IAM .</li>
 
-<h4>Tạo chính sách IAM cho phép người dùng tạo, mô tả và xóa Điểm cuối kết nối phiên bản EC2 .</h4>
+<h4>Tạo chính sách IAM cho phép người dùng tạo, mô tả và xóa Điểm cuối kết nối phiên bản EC2 </h4>
 <ol>
 <li>Truy cập vào link tài liệu :<a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/permissions-for-ec2-instance-connect-endpoint.html"> https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/permissions-for-ec2-instance-connect-endpoint.html</a></li>
 </ol>
@@ -650,6 +650,38 @@
 <p>Cuộn xuống dưới là mẫu của chính sách .</p>
 <p><img src="../images/3.createiamrole/iam-2.png" alt="iam-2"></p>
 <div class="notices note" ><p>Bất cứ điều gì mà AWS đánh dấu đỏ, điều đó có nghĩa là bạn phải cập nhật các giá trị này, vì vậy khi sao chép chính sách này chúng ta cầ cập nhập vị trí và ID tài khoản của chúng ta thay cho phần được đánh dấu đỏ .</p></div>
+<ol start="2">
+<li>Sau khi chỉnh sửa vào copy chính sách, quay lại bảng điều khiển của AWS, vào nhập tìm kiếm <strong>IAM</strong> và chọn <strong>IAM</strong> trong phần dịch vụ .</li>
+</ol>
+<p><img src="../images/3.createiamrole/iam-3.png" alt="iam-3"></p>
+<ol start="3">
+<li>Trong bảng điều khiển IAM chọn <strong>Policies</strong> .</li>
+</ol>
+<ul>
+<li>Ở phần <strong>Policies</strong> click vào <strong>Create policies</strong> .</li>
+</ul>
+<p><img src="../images/3.createiamrole/iam-0.png" alt="iam-0"></p>
+<ol start="4">
+<li>Trên trang này click vào <strong>JSON</strong> .</li>
+</ol>
+<ul>
+<li>Xóa chính sách .</li>
+</ul>
+<p><img src="../images/3.createiamrole/iam-6.png" alt="iam-6"></p>
+<ol start="4">
+<li>Và dán chính sách mà bạn sao chép từ tài liệu vào đây .</li>
+</ol>
+<p><img src="../images/3.createiamrole/iam-8.png" alt="iam-8"></p>
+<ul>
+<li>Bên cạnh đó bạn phải cập nhập <strong>Vị trí</strong> và <strong>ID tài khoản AWS</strong> của bạn như hình trên .</li>
+</ul>
+<div class="notices tip" ><p>Vào giao diện của AWS, click vào tài khoản và vị trí mà bạn sử dụng, sao đó bạn chỉ cần copy vào phần như hình trên  .</p></div>
+<ul>
+<li>Sau đó kéo xuống và click vào <strong>Next</strong> .</li>
+</ul>
+<p><img src="../images/3.createiamrole/iam-9.png" alt="iam-9"></p>
+
+
 
 
 
