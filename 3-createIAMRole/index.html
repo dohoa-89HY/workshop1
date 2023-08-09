@@ -668,7 +668,7 @@
 <li>Xóa chính sách .</li>
 </ul>
 <p><img src="../images/3.createiamrole/iam-6.png" alt="iam-6"></p>
-<ol start="4">
+<ol start="5">
 <li>Và dán chính sách mà bạn sao chép từ tài liệu vào đây .</li>
 </ol>
 <p><img src="../images/3.createiamrole/iam-8.png" alt="iam-8"></p>
@@ -680,6 +680,73 @@
 <li>Sau đó kéo xuống và click vào <strong>Next</strong> .</li>
 </ul>
 <p><img src="../images/3.createiamrole/iam-9.png" alt="iam-9"></p>
+<ol start="6">
+<li>Trên trang này cuộn lên và đặt tên cho chính sách là <strong>create-eic-endpoints</strong> .</li>
+</ol>
+<p><img src="../images/3.createiamrole/iam-10.png" alt="iam-10"></p>
+<ol start="7">
+<li>Sau đó cuộn xuống và click  <strong>Create policies</strong> .</li>
+</ol>
+<p><img src="../images/3.createiamrole/iam-11.png" alt="iam-11"></p>
+<p>Tạo chính sách thành công</p>
+<p><img src="../images/3.createiamrole/iam-12.png" alt="iam-12"></p>
+
+<h4>Tạo chính sách IAM cho phép người dùng sử dụng Điểm cuối kết nối phiên bản EC2</h4>
+<ol>
+<li>Truy cập vào link tài liệu :<a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/permissions-for-ec2-instance-connect-endpoint.html"> https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/permissions-for-ec2-instance-connect-endpoint.html</a></li>
+</ol>
+<ul>
+<li>Sau khi truy cập đường link, Cuộn xuống phần này cho phéo người dùng sử dụng điểm cuối kết nối với phiên bản ec2 . </li>
+</ul>
+<p><img src="../images/3.createiamrole/iam-13.png" alt="iam-13"></p>
+<p>Cuộn xuống dưới là mẫu của chính sách .</p>
+<p><img src="../images/3.createiamrole/iam-14.png" alt="iam-14"></p>
+<div class="notices note" ><p>Sau khi sao chép cần cập nhập vị trí, ID tài khoản của mình và điểm cuối kết nối phiên bản ec2 ở đây (cần phải tạo chính sách kết nối điểm cuối tới phiên bản ec2 mới có thể sửa phần này)</p></div>
+<p><img src="../images/3.createiamrole/iam-15.png" alt="iam-15"></p>
+<ol start="2">
+<li>Quay lại bảng điều khiển của IAM, ở thanh bên trái chọn <strong>Policies</strong> sau đó chọn <strong>Create policies</strong> .</li>
+</ol>
+<ul>
+<li>Sau đó click vào <strong>JSON</strong> và xóa lệnh cũ .</li>
+<li>Sao chép và gán tài liệu vào (Tương tự với Policies vừa rồi) </li>
+</ul>
+<p><img src="../images/3.createiamrole/iam-16.png" alt="iam-16"></p>
+<ul>
+<li>Cập nhật <strong>ID</strong> và <strong>vị trí</strong> .</li>
+</ul>
+<p><img src="../images/3.createiamrole/iam-17.png" alt="iam-17"></p>
+<ul>
+<li>Tiếp đến xóa phần này .</li>
+</ul>
+<p><img src="../images/3.createiamrole/iam-18.png" alt="iam-18"></p>
+<ul>
+<li>Sau khi xóa và điền thêm dấu * ở đây .</li>
+</ul>
+<p><img src="../images/3.createiamrole/iam-19.png" alt="iam-19"></p>
+<ul>
+<li>Tiếp theo, xóa tiếp phần này (Lưu ý chỉ xóa từ dòng 9-17) .</li>
+</ul>
+<p><img src="../images/3.createiamrole/iam-20.png" alt="iam-20"></p>
+<ul>
+<li>Sau khi xóa, chỉnh lại dấu {} .</li>
+</ul>
+<p><img src="../images/3.createiamrole/iam-21.png" alt="iam-21"></p>
+<ol start="3">
+<li>Sau khi sửa xong chính sách, cuộn xuống và click vào <strong>Next</strong> .</li>
+</ol>
+<ol start="4">
+<li>Trong trang này cuộn nên là đặt tên cho Policies là : <strong>use-eic-endpoints</strong></li>
+</ol>
+<p><img src="../images/3.createiamrole/iam-22.png" alt="iam-22"></p>
+<ol start="5">
+<li>Sau đó cuộn xuống và click vào <strong>Create policies</strong></li>
+</ol>
+<p>Tạo chính sách thành công</p>
+<p><img src="../images/3.createiamrole/iam-23.png" alt="iam-23"></p>
+
+
+
+
 
 
 
