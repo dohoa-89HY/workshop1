@@ -744,8 +744,64 @@
 <p>Tạo chính sách thành công</p>
 <p><img src="../images/3.createiamrole/iam-23.png" alt="iam-23"></p>
 
-
-
+<h4>Tạo người dùng IAM có <strong>access key</strong>, <strong>secret key</strong> và đính kèm các chính sách cho người dùng</h4>
+<ol>
+<li>Truy cập vào <strong>IAM</strong></li>
+</ol>
+<ol start="2">
+<li>Trong bảng điều khiển, bên trái click vào <strong>user</strong> sau đó click vào <strong>Add user</strong> .</li>
+</ol>
+<p><img src="../images/3.createiamrole/iam-24.png" alt="iam-24"></p>
+<ol start="3">
+<li>Trong trang này, nhập tên người dùng vào click <strong>Next</strong> .</li>
+</ol>
+<p><img src="../images/3.createiamrole/iam-25.png" alt="iam-25"></p>
+<ol start="4">
+<li>Tiếp theo, click chọn <strong>Attack policies directly</strong> .</li>
+</ol>
+<p><img src="../images/3.createiamrole/iam-26.png" alt="iam-26"></p>
+<ul>
+<li>Cuộn xuống để chọn các chính sách: <strong>AdministratorAccess</strong> .</li>
+</ul>
+<p><img src="../images/3.createiamrole/iam-27.png" alt="iam-27"></p>
+<ul>
+<li>Chọn chính sách: <strong>Create-eic-endpoints</strong> .</li>
+</ul>
+<p><img src="../images/3.createiamrole/iam-28.png" alt="iam-28"></p>
+<ul>
+<li>Chọn chính sách: <strong>use-eic-endpoints</strong> sau đó click vào <strong>Next</strong> .</li>
+</ul>
+<p><img src="../images/3.createiamrole/iam-29.png" alt="iam-29"></p>
+<p>Bạn sẽ thấy 3 chính sách mà ta vừa chọn, tiếp đến click vào <strong>Create user</strong></p>
+<p><img src="../images/3.createiamrole/iam-30.png" alt="iam-30"></p>
+<ol start="5">
+<li>Tạo thành công, tiếp theo click vào <strong>view user</strong> .</li>
+</ol>
+<p><img src="../images/3.createiamrole/iam-31.png" alt="iam-31"></p>
+<ol start="6">
+<li>Trong trang này click vào tab <strong>Security credetials</strong> .</li>
+</ol>
+<p><img src="../images/3.createiamrole/iam-32.png" alt="iam-32"></p>
+<p>Và điều muốn làm là tạo 1 khóa truy cập dưới dạng khóa bí mật bởi người dùng này .</p>
+<div class="notices note" ><p>Bạn chỉ cần thiết lập 1 lần, sau đó chạy lệnh Cli của mình để kết nối dễ dàng với bất kỳ phiên bản nào troong mạng con riêng tư của bạn khi bạn thiết lập nó lần đầu tiên .</p></div>
+<ol start="7">
+<li>Bưới này chúng ta sẽ tạo <strong>access key</strong> và<strong>secret key</strong> cho người dùng này, cuộn xuống và click vào<strong>Create access key</strong> .</li>
+</ol>
+<p><img src="../images/3.createiamrole/iam-33.png" alt="iam-33"></p>
+<ul>
+<li>Tiếp theo click chọn <strong>Command Line Interface (CLI)</strong> .</li>
+</ul>
+<p><img src="../images/3.createiamrole/iam-34.png" alt="iam-34"></p>
+<ul>
+<li>Cuộn xuống click vào hộp <strong>I understand the above recommendation and want to proceed to create an access key </strong>và click <strong>Next</strong> .</li>
+</ul>
+<p><img src="../images/3.createiamrole/iam-35.png" alt="iam-35"></p>
+<ul>
+<li>Click vào <strong>Create access key</strong> .</li>
+</ul>
+<p><img src="../images/3.createiamrole/iam-36.png" alt="iam-36"></p>
+<p>Tạo access key thành công</p>
+<p><img src="../images/3.createiamrole/iam-37.png" alt="iam-37"></p>
 
 
 
