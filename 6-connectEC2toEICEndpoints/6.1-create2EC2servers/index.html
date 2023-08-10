@@ -9,7 +9,7 @@
 
     <link rel="icon" href="../../images/favicon.png" type="image/png">
 
-    <title>Tạo nhóm bảo mật trong VPC :: EIC Endpoints</title>
+    <title>Tạo 2 máy chủ EC2 :: EIC Endpoints</title>
 
     
     <link href="../../css/nucleus.css?1691463369" rel="stylesheet">
@@ -36,7 +36,7 @@
     </style>
     
   </head>
-  <body class="" data-url="../../5-createtheEC2InstanceConnectEndpoints/5.1-createsecuritygroups/">
+  <body class="" data-url="../../6-connectEC2toEICEndpoints/6.1-create2EC2servers/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -325,7 +325,7 @@
   
       <li data-nav-id="/5-createtheEC2InstanceConnectEndpoints/" title="Create the EC2 Instance Connect Endpoint" class="dd-item 
       
-          parent
+          
       
           ">
         <a href="../../5-createtheEC2InstanceConnectEndpoints/">
@@ -355,7 +355,7 @@
     
           <li data-nav-id="/5-createtheEC2InstanceConnectEndpoints/5.1-createsecuritygroups/" title="Create security groups" class="dd-item 
               
-              active 
+               
               
               ">
             <a href="../../5-createtheEC2InstanceConnectEndpoints/5.1-createsecuritygroups/">
@@ -422,7 +422,7 @@
 
       <li data-nav-id="/6-connectEC2toEICEndpoints/6.1-create2EC2servers/" title="Create 2 EC2 servers" class="dd-item 
       
-      
+            parent
       
           ">
         <a href="../../6-connectEC2toEICEndpoints/6.1-create2EC2servers/">
@@ -445,7 +445,7 @@
 
       <li data-nav-id="/6-connectEC2toEICEndpoints/6.1-create2EC2servers/" title="Create 2 EC2 servers" class="dd-item 
           
-          
+          active
           
           ">
         <a href="../../6-connectEC2toEICEndpoints/6.1-create2EC2servers/">
@@ -676,7 +676,7 @@
             
           
           
-            <a href='../../'>EIC Endpoints</a> > <a href='../../5-createtheEC2InstanceConnectEndpoints/'>Tạo điểm cuối kết nối phiên bản EC2</a> > Tạo nhóm bảo mật trong VPC 
+            <a href='../../'>EIC Endpoints</a> > <a href='../../6-connectEC2toEICEndpoints/'>Kết nối EC2 với EIC Endpoints</a> > Tạo 2 máy chủ EC2
           
         
           
@@ -713,86 +713,23 @@
           
             <h1>
               
-              Tạo nhóm bảo mật trong VPC
+              Tạo 2 máy chủ EC2
             </h1>
           
 
         
 
-<h4>Tạo nhóm bảo mật trong VPC</h4>
-
+<h4 id="create-ec2">Tạo 2 máy chủ EC2</h4>
+<div class="notices info" ><p>Tạo 2 máy chủ Linux ở 2 AZ khác nhau trong cùng một Region</p>
 <ol>
-  <li>Truy cập giao diện <a href="https://console.aws.amazon.com/console/home?#/home"> AWS Management Console</a></li>
+    <li>Đi đến <a href="https://console.aws.amazon.com/console/home?#/home"> AWS Management Console</a></li>
 </ol>
 <ul>
-  <li>Tìm kiếm <strong> VPC</strong> .</li>
-  <li>Chọn <strong> VPC</strong> .</li>
+    <li>Tìm kiếm <strong> EC2</strong> .</li>
+    <li>Chọn <strong> EC2</strong> .</li>
 </ul>
-<p><img src="../../images/5.createtheEC2instanceconnectendpoints/vpc-1.png" alt="v-1"></p>
-<ol start="2">
-  <li>Trong giao diện <strong>Create VPC</strong> .</li>
-</ol>
-<ul>
-  <li>Chọn <strong>Security groups</strong> .</li>
-  <li>Chọn <strong>Create security groups</strong> .</li>
-</ul>
-<p><img src="../../images/5.createtheEC2instanceconnectendpoints/vpc-2.png" alt="v-2"></p>
-<ol start="3">
-  <li>Thực hiện cấu hình <strong>security groups</strong> .</li>
-</ol>
-<ul>
-  <li>Security group name: <strong>eic-endpoint-sg</strong> .</li>
-  <li><strong>Description</strong>, nhập <strong>eic-endpoint-sg </strong> .</li>
-  <li>Chọn <strong>EIC</strong> VPC .</li>
-</ul>
-<p><img src="../../images/5.createtheEC2instanceconnectendpoints/vpc-3.png" alt="v-3"></p>
-<ol start="4">
-  <li>Thực hiện cấu hình <strong>Outbound rule </strong> .</li>
-</ol>
-<ul>
-  <li>Trong type <strong>All traffic</strong> chọn <strong>SSH</strong> source: xóa ip <strong>0.0.0.0/0</strong> nhập ip của VPC EIC <strong>10.10.0.0/16</strong> .</li>
-  <li>Kiểm tra <strong>Inbound rules </strong> và chọn <strong>Creat security group</strong> .</li>
-</ul>
-<p><img src="../../images/5.createtheEC2instanceconnectendpoints/vpc-4.png" alt="v-4"></p>
-<ul>
-  <li>Hoàn thành tạo xong security group</li>
-</ul>
-<p><img src="../../images/5.createtheEC2instanceconnectendpoints/vpc-5.png" alt="v-5"></p>
+<p><img src="../../images/6.connectEC2EICEndpoints/ec-1.png" alt="ec-1"></p>
 
-<ol start="5">
-  <li>Tạo security group thứ 2 .</li>
-</ol>
-<ul>
-  <li>Chọn <strong>Create security group</strong></li>
-</ul>
-<p><img src="../../images/5.createtheEC2instanceconnectendpoints/vpc-6.png" alt="v-6"></p>
-<ol start="6">
-  <li>Thực hiện cấu hình <strong>security groups</strong> .</li>
-</ol>
-<ul>
-  <li>Security group name: <strong>eic-endpoint-sg</strong> .</li>
-  <li><strong>Description</strong>, nhập <strong>ec2-instance-sg</strong> .</li>
-  <li>Chọn <strong>EIC</strong> VPC .</li>
-</ul>
-<p><img src="../../images/5.createtheEC2instanceconnectendpoints/vpc-7.png" alt="v-7"></p>
-<ol start="4">
-  <li>Thực hiện cấu hình <strong>Iutbound rule </strong> .</li>
-</ol>
-<ul>
-  <li>Chọn type: <strong>All traffic</strong> và giữ nguyên <strong>Source: Custom</strong> .</li>
-  <li>Chọn vào search box và chọn <strong>VCP EIC</strong> .</li>
-</ul>
-<p><img src="../../images/5.createtheEC2instanceconnectendpoints/vpc-8.png" alt="v-8"></p>
-<ul>
-  <li>Chọn <strong>Create security group</strong></li>
-</ul>
-<p><img src="../../images/5.createtheEC2instanceconnectendpoints/vpc-9.png" alt="v-9"></p>
-<ul>
-  <li>Tạo thành công .</li>
-</ul>
-<p><img src="../../images/5.createtheEC2instanceconnectendpoints/vpc-10.png" alt="v-10"></p>
-<p>Vậy là bạn đã có 2 security group trong VPC EIC</p>
-<p><img src="../../images/5.createtheEC2instanceconnectendpoints/vpc-11.png" alt="v-11"></p>
 
 
 
