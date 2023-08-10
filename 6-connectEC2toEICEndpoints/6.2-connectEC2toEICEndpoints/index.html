@@ -9,7 +9,7 @@
 
     <link rel="icon" href="../../images/favicon.png" type="image/png">
 
-    <title>Tạo nhóm bảo mật trong VPC :: EIC Endpoints</title>
+    <title>Kết nối EC2 với EIC Endpoints :: EIC Endpoints</title>
 
     
     <link href="../../css/nucleus.css?1691463369" rel="stylesheet">
@@ -36,7 +36,7 @@
     </style>
     
   </head>
-  <body class="" data-url="../../5-createtheEC2InstanceConnectEndpoints/5.1-createsecuritygroups/">
+  <body class="" data-url="../../6-connectEC2toEICEndpoints/6.2-connectEC2toEICEndpoints/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -422,7 +422,7 @@
 
       <li data-nav-id="/6-connectEC2toEICEndpoints/6.1-create2EC2servers/" title="Create 2 EC2 servers" class="dd-item 
       
-      
+          parent
       
           ">
         <a href="../../6-connectEC2toEICEndpoints/6.1-create2EC2servers/">
@@ -473,7 +473,7 @@
       
       <li data-nav-id="/6-connectEC2toEICEndpoints/6.2-connectEC2toEICEndpoints/" title="Connect EC2 to EIC Endpoints" class="dd-item 
           
-          
+          active
           
           ">
         <a href="../../6-connectEC2toEICEndpoints/6.2-connectEC2toEICEndpoints/">
@@ -676,7 +676,7 @@
             
           
           
-            <a href='../../'>EIC Endpoints</a> > <a href='../../5-createtheEC2InstanceConnectEndpoints/'>Tạo điểm cuối kết nối phiên bản EC2</a> > Tạo nhóm bảo mật trong VPC 
+            <a href='../../'>EIC Endpoints</a> > <a href='../../6-connectEC2toEICEndpoints/'>Kết nối EC2 với EIC Endpoints</a> > Kết nối EC2 với EIC Endpoints
           
         
           
@@ -713,13 +713,59 @@
           
             <h1>
               
-              Tạo nhóm bảo mật trong VPC
+              Kết nối EC2 với EIC Endpoints
             </h1>
           
 
         
 
-<h4>Tạo nhóm bảo mật trong VPC</h4>
+<h4>Kết nối EC2 với EIC Endpoints</h4>
+<ol>
+  <li>Trong giao diện <strong>EC2 Instance</strong></li>
+</ol>
+<ul>
+  <li>Chọn <strong>ec2-az1</strong>, click vào <strong>Connect</strong></li>
+</ul>
+<p><img src="../../images/6.connectEC2EICEndpoints/ec-13.png" alt="ec-13"></p>
+<ol start="2">
+  <li>Trong giao diện <strong>Connect to instance </strong> chọn <strong>Connect using EC2 Instance Connect Endpoint</strong></li>
+</ol>
+<p><img src="../../images/6.connectEC2EICEndpoints/ec-14.png" alt="ec-14"></p>
+<ul>
+  <li>Cuộn xuống chọn <strong>hoa-eic-endpoint</strong> trong mục <strong>EC2 Instance connect Endpiont</strong> và click <strong>Connect</strong></li>
+</ul>
+<p><img src="../../images/6.connectEC2EICEndpoints/ec-15.png" alt="ec-15"></p>
+<p>Kết nối thành công với <strong>ec2-az1</strong></p>
+<p><img src="../../images/6.connectEC2EICEndpoints/ec-16.png" alt="ec-16"></p>
+<ol start="3">
+  <li>Thực hiện các bước tương tự với <strong>ec2-az2</strong></li>
+</ol>
+<p><img src="../../images/6.connectEC2EICEndpoints/ec-17.png" alt="ec-17"></p>
+<p><img src="../../images/6.connectEC2EICEndpoints/ec-18.png" alt="ec-18"></p>
+<p>Kết nối thành công với <strong>ec2-az2</strong></p>
+<p><img src="../../images/6.connectEC2EICEndpoints/ec-19.png" alt="ec-19"></p>
+
+<h4>Thực hiện câu lệnh AWS CLI để kết nối đến EC2 Instance</h4>
+<p>Để kiểm tra kết nối với phiên bản của bạn từ AWS CLI, bạn có thể chạy lệnh sau trong đó [INSTANCE] là ID phiên bản của phiên bản EC2 của bạn:</p>
+<p>Với câu lệnh: <code>aws ec2-instance-connect ssh --instance-id [INSTANCE]</code></p>
+<div class="notices note" ><p>Lưu ý rằng bạn vẫn có thể sử dụng thông tin đăng nhập SSH tồn tại lâu dài để kết nối nếu bạn phải duy trì các quy trình công việc hiện có . Tuy nhiên, hãy lưu ý rằng thông tin đăng nhập động, thường xuyên được luân chuyển thường an toàn hơn.</p></div>
+<ol>
+  <li>Vào <strong>ec2-az2</strong> sao chép id instance của mình</li>
+</ol>
+<p><img src="../../images/6.connectEC2EICEndpoints/ec-23.png" alt="ec-23"></p>
+<ol start="2">
+  <li>Mở <strong>Powershell</strong></li>
+</ol>
+<ul>
+  <li>Chỉnh sửa câu lệnh với [INSTANCE] là id vừa sao chép</li>
+  <li>Nhấn <strong>enter</strong></li>
+  <li>Gõ <strong>Yes</strong> tiếp tục nhấp <strong>enter</strong></li>
+</ul>
+<p><img src="../../images/6.connectEC2EICEndpoints/ec-24.png" alt="ec-24"></p>
+<p>Vậy là bạn đã kết nối thành công tới phiên bản ec2-az2</p>
+
+<div class="notices note" ><p>Làm tương tự các bước với ec2-az1</p></div>
+
 
 
 
