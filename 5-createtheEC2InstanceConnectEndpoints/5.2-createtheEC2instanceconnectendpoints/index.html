@@ -9,7 +9,7 @@
 
     <link rel="icon" href="../../images/favicon.png" type="image/png">
 
-    <title>Chạy câu lệnh "aws configure" :: EIC Endpoints</title>
+    <title>Tạo điểm cuối kết nối phiên bản EC2 :: EIC Endpoints</title>
 
     
     <link href="../../css/nucleus.css?1691463369" rel="stylesheet">
@@ -36,7 +36,7 @@
     </style>
     
   </head>
-  <body class="" data-url="../../4-configureIAMusercredentials/4.1-runcommandawsconfigure/">
+  <body class="" data-url="../../5-createtheEC2InstanceConnectEndpoints/5.2-createtheEC2instanceconnectendpoints/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -231,7 +231,7 @@
   
       <li data-nav-id="/4-configureIAMusercredentials/" title="Configure IAM user credentials" class="dd-item 
       
-          parent
+         
       
           ">
         <a href="../../4-configureIAMusercredentials/">
@@ -262,7 +262,7 @@
   
       <li data-nav-id="/4-configureIAMusercredentials/4.1-runcommandawsconfigure/" title="Run command aws configure" class="dd-item 
       
-          active
+        
       
           ">
         <a href="../../4-configureIAMusercredentials/4.1-runcommandawsconfigure/">
@@ -325,7 +325,7 @@
   
       <li data-nav-id="/5-createtheEC2InstanceConnectEndpoints/" title="Create the EC2 Instance Connect Endpoint" class="dd-item 
       
-      
+          parent
       
           ">
         <a href="../../5-createtheEC2InstanceConnectEndpoints/">
@@ -335,7 +335,80 @@
         
         </a>
     
+ 
+        <ul>
+          
+          
             
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+          <li data-nav-id="/5-createtheEC2InstanceConnectEndpoints/5.1-createsecuritygroup/" title="Create security groups" class="dd-item 
+              
+              
+              
+              ">
+            <a href="../../5-createtheEC2InstanceConnectEndpoints/5.1-createsecuritygroup/">
+                 <b> 5.1 </b> Tạo nhóm bảo mật trong VPC
+                
+                  <i class="fas fa-check read-icon"></i>
+                
+            </a>
+            
+                    
+          </li>
+        
+       
+      
+                  
+                
+                  
+                  
+      
+      
+      
+      
+       
+        
+          
+          <li data-nav-id="/5-createtheEC2InstanceConnectEndpoints/5.2-createtheEC2InstanceConnectEndpoints/" title="Create ec2-instance-connect-endpoint" class="dd-item 
+              
+              active    
+              
+              ">
+            <a href="../../5-createtheEC2InstanceConnectEndpoints/5.2-createtheEC2InstanceConnectEndpoints/">
+                 <b> 5.2 </b> Tạo điểm cuối kết nối phiên bản EC2
+                
+                  <i class="fas fa-check read-icon"></i>
+                
+            </a>
+            
+                    
+          </li>
+        
+       
+      
+                  
+      
+                  
+                
+              
+              </ul>        
+
+
+
+
       </li>
 
 
@@ -605,7 +678,7 @@
             
           
           
-            <a href='../../'>EIC Endpoints</a> > <a href='../../4-configureIAMusercredentials/'>Định cấu hình thông tin xác thực người dùng IAM</a> > Chạy câu lệnh "aws configure"
+            <a href='../../'>EIC Endpoints</a> > <a href='../../4-configureIAMusercredentials/'>Tạo điểm cuối kết nối phiên bản EC2</a> > Tạo điểm cuối kết nối phiên bản EC2
           
         
           
@@ -642,7 +715,7 @@
           
             <h1>
               
-              Chạy câu lệnh "aws configure"
+              Tạo điểm cuối kết nối phiên bản EC2
             </h1>
           
 
@@ -650,51 +723,7 @@
 
 
 
-	<p>Ở bước này bạn sẽ chạy lệnh <strong>aws configure</strong> để định cấu hình thông tin đăng nhập người dùng IAM trên máy tính của bạn bằng <strong>PowerShell</strong> .</p>
-<h4 id="run-command-aws-configure">Chạy lệnh aws configure</h4>
-<ol>
-  <li>Mở <strong>PowerShell</strong> .</li>
-</ol>
-<p><img src="../../images/4.configureiamusercredentials/cli-2.png" alt="cli-2"></p>
-<ol start="2">
-  <li>Gõ dòng lệnh: <strong>aws configure</strong></li>
-</ol>
-<p><img src="../../images/4.configureiamusercredentials/cli-03.png" alt="cli-3"></p>
-<ul>
-  <li>Yêu cầu nhập thông tin, quay lại <strong>trang Access key</strong> copy <strong>Access key</strong> .</li>
-</ul>
-<p><img src="../../images/4.configureiamusercredentials/cli-4.png" alt="cli-4"></p>
-<ol start="3">
-  <li>Sau đó paste vào cửa sổ <strong>PowerShell</strong> và enter .</li>
-</ol>
-<p><img src="../../images/4.configureiamusercredentials/cli-05.png" alt="cli-5"></p>
-<ul>
-  <li>Yêu cầu khóa truy cập, quay lại <strong>trang Access key</strong> copy <strong>Secret access key</strong> .</li>
-</ul>
-<p><img src="../../images/4.configureiamusercredentials/cli-6.png" alt="cli-6"></p>
-<ol start="4">
-  <li>Sau đó paste vào cửa sổ <strong>PowerShell</strong> và enter .</li>
-</ol>
-<p><img src="../../images/4.configureiamusercredentials/cli-07.png" alt="cli-7"></p>
-<ol start="5">
-  <li>Yêu cầu nhập <strong>vị trí</strong> ,nhập <strong>vị trí</strong> của mình và enter .</li>
-</ol>
-<p><img src="../../images/4.configureiamusercredentials/cli-08.png" alt="cli-8"></p>
-<ul>
-  <li>Enter tiếp</li>
-</ul>
-<ul>
-  <li>Tìm thư mục trong this PC, click vào ổ C -> Users -> Admin -> .aws </li>
-</ul>
-<p><img src="../../images/4.configureiamusercredentials/cli-9.png" alt="cli-9"></p>
-<ul>
-  <li>Trong mục .aws mở mục <strong>config</strong> bằng notepad .</li>
-</ul>
-<p><img src="../../images/4.configureiamusercredentials/cli-10.png" alt="cli-10"></p>
-<ul>
-  <li>Mở tiếp file <strong>credetial</strong> ,bạn thấy nó đã được cấu hình .</li>
-</ul>
-<p><img src="../../images/4.configureiamusercredentials/cli-11.png" alt="cli-11"></p>
+
 
 
 
