@@ -235,7 +235,7 @@
       
           ">
         <a href="../../4-configureIAMusercredentials/">
-          <b> 4. </b> Định cấu hình thông tin xác thực người dùng IAM
+          <b> 4. </b> Cấu hình thông tin xác thực người dùng IAM
         
             <i class="fas fa-check read-icon"></i>
         
@@ -728,7 +728,7 @@
   <li>Tìm kiếm <strong> VPC</strong> .</li>
   <li>Chọn <strong> VPC</strong> .</li>
 </ul>
-<p><img src="../../images/5.createtheEC2instanceconnectendpoints/vpc-1.png" alt="v-1"></p>
+<p><img src="../../images/5.createtheEC2instanceconnectendpoints/ec-1.png" alt="v-1"></p>
 <ol start="2">
   <li>Trong giao diện <strong>Create VPC</strong> .</li>
 </ol>
@@ -736,7 +736,7 @@
   <li>Chọn <strong>Security groups</strong> .</li>
   <li>Chọn <strong>Create security groups</strong> .</li>
 </ul>
-<p><img src="../../images/5.createtheEC2instanceconnectendpoints/vpc-2.png" alt="v-2"></p>
+<p><img src="../../images/5.createtheEC2instanceconnectendpoints/ec-2.png" alt="v-2"></p>
 <ol start="3">
   <li>Thực hiện cấu hình <strong>security groups</strong> .</li>
 </ol>
@@ -745,7 +745,7 @@
   <li><strong>Description</strong>, nhập <strong>eic-endpoint-sg </strong> .</li>
   <li>Chọn <strong>EIC</strong> VPC .</li>
 </ul>
-<p><img src="../../images/5.createtheEC2instanceconnectendpoints/vpc-3.png" alt="v-3"></p>
+<p><img src="../../images/5.createtheEC2instanceconnectendpoints/ec-3.png" alt="v-3"></p>
 <ol start="4">
   <li>Thực hiện cấu hình <strong>Outbound rule </strong> .</li>
 </ol>
@@ -753,11 +753,11 @@
   <li>Trong type <strong>All traffic</strong> chọn <strong>SSH</strong> source: xóa ip <strong>0.0.0.0/0</strong> nhập ip của VPC EIC <strong>10.10.0.0/16</strong> .</li>
   <li>Kiểm tra <strong>Inbound rules </strong> và chọn <strong>Creat security group</strong> .</li>
 </ul>
-<p><img src="../../images/5.createtheEC2instanceconnectendpoints/vpc-4.png" alt="v-4"></p>
+<p><img src="../../images/5.createtheEC2instanceconnectendpoints/ec-4.png" alt="v-4"></p>
 <ul>
   <li>Hoàn thành tạo xong security group</li>
 </ul>
-<p><img src="../../images/5.createtheEC2instanceconnectendpoints/vpc-5.png" alt="v-5"></p>
+<p><img src="../../images/5.createtheEC2instanceconnectendpoints/ec-5.png" alt="v-5"></p>
 
 <ol start="5">
   <li>Tạo security group thứ 2 .</li>
@@ -765,7 +765,7 @@
 <ul>
   <li>Chọn <strong>Create security group</strong></li>
 </ul>
-<p><img src="../../images/5.createtheEC2instanceconnectendpoints/vpc-6.png" alt="v-6"></p>
+<p><img src="../../images/5.createtheEC2instanceconnectendpoints/ec-6.png" alt="v-6"></p>
 <ol start="6">
   <li>Thực hiện cấu hình <strong>security groups</strong> .</li>
 </ol>
@@ -774,7 +774,7 @@
   <li><strong>Description</strong>, nhập <strong>ec2-instance-sg</strong> .</li>
   <li>Chọn <strong>EIC</strong> VPC .</li>
 </ul>
-<p><img src="../../images/5.createtheEC2instanceconnectendpoints/vpc-7.png" alt="v-7"></p>
+<p><img src="../../images/5.createtheEC2instanceconnectendpoints/ec-7.png" alt="v-7"></p>
 <ol start="4">
   <li>Thực hiện cấu hình <strong>Iutbound rule </strong> .</li>
 </ol>
@@ -782,17 +782,17 @@
   <li>Chọn type: <strong>All traffic</strong> và giữ nguyên <strong>Source: Custom</strong> .</li>
   <li>Chọn vào search box và chọn <strong>VCP EIC</strong> .</li>
 </ul>
-<p><img src="../../images/5.createtheEC2instanceconnectendpoints/vpc-8.png" alt="v-8"></p>
+<p><img src="../../images/5.createtheEC2instanceconnectendpoints/ec-8.png" alt="v-8"></p>
 <ul>
   <li>Chọn <strong>Create security group</strong></li>
 </ul>
-<p><img src="../../images/5.createtheEC2instanceconnectendpoints/vpc-9.png" alt="v-9"></p>
+<p><img src="../../images/5.createtheEC2instanceconnectendpoints/ec-9.png" alt="v-9"></p>
 <ul>
   <li>Tạo thành công .</li>
 </ul>
-<p><img src="../../images/5.createtheEC2instanceconnectendpoints/vpc-10.png" alt="v-10"></p>
+<p><img src="../../images/5.createtheEC2instanceconnectendpoints/ec-10.png" alt="v-10"></p>
 <p>Vậy là bạn đã có 2 security group trong VPC EIC</p>
-<p><img src="../../images/5.createtheEC2instanceconnectendpoints/vpc-11.png" alt="v-11"></p>
+<p><img src="../../images/5.createtheEC2instanceconnectendpoints/ec-11.png" alt="v-11"></p>
 
 
 
