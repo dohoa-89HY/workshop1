@@ -740,17 +740,15 @@
 <ol start="3">
   <li>Thực hiện các bước tương tự với <strong>ec2-az2</strong></li>
 </ol>
-<p><img src="../../images/6.connectEC2EICEndpoints/co-18.png" alt="ec-17"></p>
-<p><img src="../../images/6.connectEC2EICEndpoints/co-19.png" alt="ec-18"></p>
 <p>Kết nối thành công với <strong>ec2-az2</strong></p>
-<p><img src="../../images/6.connectEC2EICEndpoints/co-20.png" alt="ec-19"></p>
+<p><img src="../../images/6.connectEC2EICEndpoints/co-18.png" alt="ec-19"></p>
 
 <h4>Thực hiện câu lệnh AWS CLI để kết nối đến EC2 Instance</h4>
 <p>Để kiểm tra kết nối với phiên bản của bạn từ AWS CLI, bạn có thể chạy lệnh sau trong đó [INSTANCE] là ID phiên bản của phiên bản EC2 của bạn:</p>
 <p>Với câu lệnh: <code>aws ec2-instance-connect ssh --instance-id [INSTANCE]</code></p>
 <div class="notices note" ><p>Lưu ý rằng bạn vẫn có thể sử dụng thông tin đăng nhập SSH tồn tại lâu dài để kết nối nếu bạn phải duy trì các quy trình công việc hiện có . Tuy nhiên, hãy lưu ý rằng thông tin đăng nhập động, thường xuyên được luân chuyển thường an toàn hơn.</p></div>
 <ol>
-  <li>Vào <strong>ec2-az2</strong> sao chép id instance của mình</li>
+  <li>Vào <strong>ec2-az1</strong> sao chép id instance của mình</li>
 </ol>
 <p><img src="../../images/6.connectEC2EICEndpoints/co-21.png" alt="ec-23"></p>
 <ol start="2">
@@ -763,9 +761,9 @@
   <li>Gõ <strong>Yes</strong> tiếp tục nhấp <strong>enter</strong></li>
 </ul>
 <p><img src="../../images/6.connectEC2EICEndpoints/co-22.png" alt="ec-24"></p>
-<p>Vậy là bạn đã kết nối thành công tới phiên bản <strong>ec2-az2</strong></p>
+<p>Vậy là bạn đã kết nối thành công tới phiên bản <strong>ec2-az1</strong></p>
 
-<p>Làm tương tự các bước với <strong>ec2-az1</strong></p>
+<p>Làm tương tự các bước với <strong>ec2-az2</strong></p>
 
 
 
